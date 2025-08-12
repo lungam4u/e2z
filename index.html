@@ -1,390 +1,728 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1671.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Menlo; color: #000000; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Menlo; color: #000000; -webkit-text-stroke: #000000; min-height: 16.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 14.0px Menlo; color: #18702b; -webkit-text-stroke: #18702b}
-    span.s1 {font-kerning: none; background-color: #ecf1f7}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #ecf1f7; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s5 {font-kerning: none; color: #0000ff; background-color: #ecf1f7; -webkit-text-stroke: 0px #0000ff}
-    span.s6 {font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
-    span.s7 {font-kerning: none; color: #18702b; background-color: #ecf1f7; -webkit-text-stroke: 0px #18702b}
-    span.s8 {font-kerning: none; color: #093c94; background-color: #ecf1f7; -webkit-text-stroke: 0px #093c94}
-    span.s9 {font-kerning: none; color: #137646; background-color: #ecf1f7; -webkit-text-stroke: 0px #137646}
-    span.s10 {font-kerning: none}
-    span.s11 {font-kerning: none; color: #4d5055; background-color: #ecf1f7; -webkit-text-stroke: 0px #4d5055}
-    span.s12 {font: 14.0px 'Apple Color Emoji'; font-kerning: none; background-color: #ecf1f7}
-  </style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E2Z Solutions Hub</title>
+
+<!-- Changed font to Montserrat -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+body {
+
+font-family: 'Montserrat', sans-serif; /* Updated font-family */
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+ }
+
+/* Updated color palette based on provided instructions */
+
+.bg-custom-blue {
+
+background-color: #0B3D91; /* Deep blue: Professionalism, trust, and stability */
+
+ }
+
+.text-custom-blue {
+
+color: #0B3D91;
+
+ }
+
+.border-custom-blue {
+
+border-color: #0B3D91;
+
+ }
+
+.bg-custom-grey {
+
+background-color: #8F9393; /* Gray: Modern, tech-forward feel */
+
+color: #ffffff; /* Ensure text is white on this dark grey */
+
+ }
+
+.text-custom-grey {
+
+color: #8F9393; /* For text that needs to be this grey */
+
+ }
+
+.bg-custom-light-blue {
+
+background-color: #E0F2FE; /* A lighter blue for accents/sections, keeping similar to original for contrast */
+
+ }
+
+.bg-custom-dark-blue {
+
+background-color: #072C6A; /* A darker shade derived from the new deep blue for the footer */
+
+ }
+
+.text-accent-blue {
+
+color: #007bff; /* Brighter blue for links/buttons, similar to the dot in the logo */
+
+ }
+
+.bg-accent-blue {
+
+background-color: #007bff;
+
+ }
+
+
+
+
+/* Hero section with background image */
+
+.hero-section {
+
+background-image: url('http://googleusercontent.com/file_content/6'); /* Image of laptop and mouse on desk */
+
+background-size: cover;
+
+background-position: center;
+
+position: relative;
+
+color: #ffffff;
+
+padding: 5rem 1rem; /* Adjust padding as needed */
+
+ }
+
+
+
+
+/* Overlay for hero section text readability */
+
+.hero-section::before {
+
+content: "";
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+right: 0;
+
+bottom: 0;
+
+background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+
+z-index: 1;
+
+ }
+
+.hero-section > div {
+
+position: relative;
+
+z-index: 2;
+
+ }
+
+</style>
+
+
+
+
+<!-- Favicon -->
+
+<link rel="icon" href="http://googleusercontent.com/file_content/1" type="image/jpeg">
+
+<!-- Open Graph / Social Media Thumbnail (for sharing) -->
+
+<meta property="og:title" content="E2Z Solutions Hub">
+
+<meta property="og:description" content="Empowering Africa's Digital Future. Today.">
+
+<meta property="og:image" content="http://googleusercontent.com/file_content/1">
+
+<meta property="og:url" content="YOUR_WEBSITE_URL"> <!-- Replace with your actual website URL -->
+
+<meta property="og:type" content="website">
+
+
+
+
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"en"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">E2Z Solutions Hub</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Changed font to Montserrat --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s4"> </span><span class="s7">'Montserrat'</span><span class="s4">, </span><span class="s8">sans-serif</span><span class="s4">; </span><span class="s1">/* Updated font-family */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-sizing:</span><span class="s1"> </span><span class="s8">border-box</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Updated color palette based on provided instructions */</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.bg-custom-blue</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s4"> </span><span class="s8">#0B3D91</span><span class="s4">; </span><span class="s1">/* Deep blue: Professionalism, trust, and stability */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.text-custom-blue</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s8">#0B3D91</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.border-custom-blue</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-color:</span><span class="s1"> </span><span class="s8">#0B3D91</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.bg-custom-grey</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s4"> </span><span class="s8">#8F9393</span><span class="s4">; </span><span class="s1">/* Gray: Modern, tech-forward feel */</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s4"> </span><span class="s8">#ffffff</span><span class="s4">; </span><span class="s1">/* Ensure text is white on this dark grey */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.text-custom-grey</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s4"> </span><span class="s8">#8F9393</span><span class="s4">; </span><span class="s1">/* For text that needs to be this grey */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.bg-custom-light-blue</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s4"> </span><span class="s8">#E0F2FE</span><span class="s4">; </span><span class="s1">/* A lighter blue for accents/sections, keeping similar to original for contrast */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.bg-custom-dark-blue</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s4"> </span><span class="s8">#072C6A</span><span class="s4">; </span><span class="s1">/* A darker shade derived from the new deep blue for the footer */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.text-accent-blue</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s4"> </span><span class="s8">#007bff</span><span class="s4">; </span><span class="s1">/* Brighter blue for links/buttons, similar to the dot in the logo */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.bg-accent-blue</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s8">#007bff</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Hero section with background image */</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.hero-section</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-image:</span><span class="s4"> </span><span class="s8">url</span><span class="s4">(</span><span class="s1">'http://googleusercontent.com/file_content/6'</span><span class="s4">); </span><span class="s11">/* Image of laptop and mouse on desk */</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-size:</span><span class="s4"> </span><span class="s8">cover</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-position:</span><span class="s4"> </span><span class="s8">center</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s8">relative</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s8">#ffffff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">padding:</span><span class="s4"> </span><span class="s9">5rem</span><span class="s4"> </span><span class="s9">1rem</span><span class="s4">; </span><span class="s1">/* Adjust padding as needed */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Overlay for hero section text readability */</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.hero-section::before</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">content:</span><span class="s1"> </span><span class="s7">""</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s8">absolute</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">top:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">left:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">right:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">bottom:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s4"> </span><span class="s8">rgba(</span><span class="s9">0</span><span class="s4">, </span><span class="s9">0</span><span class="s4">, </span><span class="s9">0</span><span class="s4">, </span><span class="s9">0.5</span><span class="s8">)</span><span class="s4">; </span><span class="s1">/* Dark overlay for text readability */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">z-index:</span><span class="s1"> </span><span class="s9">1</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.hero-section</span><span class="s4"> &gt; </span><span class="s1">div</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s8">relative</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">z-index:</span><span class="s1"> </span><span class="s9">2</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Favicon --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"icon"</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/1"</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"image/jpeg"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Open Graph / Social Media Thumbnail (for sharing) --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s1">"og:title"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"E2Z Solutions Hub"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s1">"og:description"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"Empowering Africa's Digital Future. Today."</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s1">"og:image"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/1"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s5">"og:url"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s5">"YOUR_WEBSITE_URL"</span><span class="s3">&gt;</span><span class="s4"> </span><span class="s1">&lt;!-- Replace with your actual website URL --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s1">"og:type"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"website"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white text-gray-800"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Header/Navigation --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">header</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-blue text-white p-4 shadow-md"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">nav</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto flex justify-between items-center flex-wrap"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Logo Image Added --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/2"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"E2Z Solutions Hub Logo"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-10 md:h-12 w-auto"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-x-4 flex-grow text-right pr-4 md:flex-grow-0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#solutions"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hover:text-gray-200"</span><span class="s3">&gt;</span><span class="s1">Explore Our Solutions</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#about-us"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-gray-200"</span><span class="s3">&gt;</span><span class="s4">About Us</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">nav</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">header</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Hero Section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hero-section py-20 px-4 md:py-32"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl md:text-6xl font-extrabold leading-tight mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>Empowering Africa's Digital Future. Today.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg md:text-xl mb-8"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>Welcome to E2Z Solutions Hub, a premier technology and business solutions provider rooted in South Africa, with operations spanning Gauteng and KwaZulu-Natal. With over 95 years of combined industry experience, our seasoned experts empower businesses and government entities with tailored, sustainable, and secure solutions that drive efficiency, foster growth, and ignite innovation in the digital era. We are committed to being the leading force in Africa's digital transformation, ensuring our clients achieve operational excellence and long-term success.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#contact"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white text-custom-blue px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-100 transition duration-300"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>Contact Us Now</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- About Us Section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"about-us"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 px-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl font-bold text-center mb-12 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">About Us</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-3 gap-8 text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-6 rounded-lg shadow-lg bg-custom-light-blue"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-5xl mb-4"</span><span class="s3">&gt;</span><span class="s12">🎯</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-2"</span><span class="s3">&gt;</span><span class="s1">Mission</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Empowering organizations with sustainable and efficient solutions to foster growth, security, and innovation in the digital era.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-6 rounded-lg shadow-lg bg-custom-light-blue"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-5xl mb-4"</span><span class="s3">&gt;</span><span class="s12">🚀</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-2"</span><span class="s3">&gt;</span><span class="s4">Vision</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">To be the leading provider of innovative and sustainable business and technology solutions in Africa and beyond.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-6 rounded-lg shadow-lg bg-custom-light-blue"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-5xl mb-4"</span><span class="s3">&gt;</span><span class="s12">🏆</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-2"</span><span class="s3">&gt;</span><span class="s4">Goal</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">To deliver exceptional, customer-focused solutions that drive digital transformation, operational excellence, and long-term business success.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">hr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"border-t-2 border-gray-200 my-8"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Key Services Section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"solutions"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 px-4 bg-custom-grey"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl font-bold text-center mb-12 text-white"</span><span class="s3">&gt;</span><span class="s4">Key Services</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-3 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/7"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"ICT Services Icon - Servers and Cloud"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-24 h-24 mb-4 rounded-full object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">ICT Services</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-4"</span><span class="s3">&gt;</span><span class="s1">Robust ICT: Build, secure, optimize your digital foundation for success.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-accent-blue hover:underline font-medium"</span><span class="s3">&gt;</span><span class="s4">Learn More</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/5"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Consultancy Services Icon - Hands on Blueprint"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-24 h-24 mb-4 rounded-full object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">Consultancy Services</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-4"</span><span class="s3">&gt;</span><span class="s1">Strategic Insights, tailored solutions: Navigate complexity, drive sustainable growth.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-accent-blue hover:underline font-medium"</span><span class="s3">&gt;</span><span class="s4">Learn More</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/9"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Support Services Icon - Tech Components"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-24 h-24 mb-4 rounded-full object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">Support Services</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-4"</span><span class="s3">&gt;</span><span class="s1">Flawless 24/7 Managed IT Support: Grow your business, we handle the tech.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-accent-blue hover:underline font-medium"</span><span class="s3">&gt;</span><span class="s4">Learn More</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">hr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"border-t-2 border-gray-200 my-8"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Detailed Services Section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 px-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- ICT Services Detailed --&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold mb-6 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">ICT Services</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-8"</span><span class="s3">&gt;</span><span class="s1">In today's interconnected world, a robust and agile ICT foundation is non-negotiable for business success. Our ICT Services are designed to build, secure, and optimize your digital infrastructure, ensuring seamless operations and preparing your business for future challenges.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-2 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/8"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"ICT Infrastructure Icon - Cloud Architecture"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-16 h-16 rounded-lg object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s1">ICT Infrastructure</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Build a robust foundation for your digital operations. From network design to cloud services, we ensure your systems are resilient, scalable, and secure.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/4"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Technology Supply Icon - Laptop Setup"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-16 h-16 rounded-lg object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s1">Technology Supply</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Get the technology you need, when you need it, with E2Z Solutions Hub's efficient Technology Supply Solutions.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Consultancy Services Detailed --&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold mb-6 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">Consultancy Services</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-8"</span><span class="s3">&gt;</span><span class="s1">Strategic Insights, tailored solutions: Navigate complexity, drive sustainable growth. (Further details from PDF for Consultancy Services not fully readable, using placeholder text)</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-2 lg:grid-cols-3 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/3"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Compliance Icon - Gavel and Documents"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-16 h-16 rounded-lg object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s1">Compliance &amp; Auditing</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Navigating complex regulatory landscapes with expertise.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s1">&lt;!-- Keeping emoji for specific HR context --&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-5xl"</span><span class="s3">&gt;</span><span class="s12">👥</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s1">HR &amp; Employee Relations</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Cultivating high-performing teams through strategic people solutions.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s1">&lt;!-- Keeping emoji for AI for now --&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-5xl"</span><span class="s3">&gt;</span><span class="s12">🤖</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">AI Consultancy</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Enhancing operations and experiences by implementing intelligent automation.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/10"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Project Management Icon - Monitor with Graphs"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-16 h-16 rounded-lg object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s1">Project &amp; Programme Management</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Ensuring successful delivery of your strategic initiatives.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/4"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"IT Transformation Icon - Laptop Setup"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-16 h-16 rounded-lg object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s1">IT Transformation</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Orchestrating your organization's seamless digital evolution.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Support Services Detailed --&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold mb-6 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">Support Services</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-8"</span><span class="s3">&gt;</span><span class="s1">Focus on what you do best while we manage the rest. Our comprehensive Support Services, centered around Managed IT, ensure your technology operates flawlessly 24/7, freeing your team from IT complexities and allowing you to concentrate on core business growth.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-2 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/9"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"ITSM Icon - Tech Components"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-16 h-16 rounded-lg object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">ITSM</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Proactive, end-to-end IT management, freeing you to focus on your core business.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"http://googleusercontent.com/file_content/8"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Cybersecurity Icon - Cloud Architecture"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-16 h-16 rounded-lg object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-2 text-custom-blue"</span><span class="s3">&gt;</span><span class="s4">Cybersecurity</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Fortifying your digital defenses against every evolving threat.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">hr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"border-t-2 border-gray-200 my-8"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Meet the Team Section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 px-4 bg-custom-grey text-white"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl font-bold text-center mb-12 text-white"</span><span class="s3">&gt;</span><span class="s4">Meet the Team</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-2 lg:grid-cols-3 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Lunga Mkhwanazi --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg text-center text-gray-800"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&amp;text=LM"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Lunga Mkhwanazi"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-32 h-32 rounded-full mx-auto mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-1"</span><span class="s3">&gt;</span><span class="s1">Lunga Mkhwanazi</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-accent-blue font-medium mb-2"</span><span class="s3">&gt;</span><span class="s1">Managing Director</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-gray-600"</span><span class="s3">&gt;</span><span class="s1">A visionary leader with years of experience, drives strategic initiative, fosters operational excellence, and aligns business with technical solutions.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Tshepang Papo Mkhwanazi --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg text-center text-gray-800"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&amp;text=TPM"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Tshepang Papo Mkhwanazi"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-32 h-32 rounded-full mx-auto mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-1"</span><span class="s3">&gt;</span><span class="s1">Tshepang Papo Mkhwanazi</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-accent-blue font-medium mb-2"</span><span class="s3">&gt;</span><span class="s1">Director: Compliance and Auditing</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-gray-600"</span><span class="s3">&gt;</span><span class="s1">An expert in governance with years of experience in compliance, risk management, and quality assurance.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Merciful Sundlana --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg text-center text-gray-800"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&amp;text=MS"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Merciful Sundlana"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-32 h-32 rounded-full mx-auto mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-1"</span><span class="s3">&gt;</span><span class="s1">Merciful Sundlana</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-accent-blue font-medium mb-2"</span><span class="s3">&gt;</span><span class="s1">Director: Technology Solutions</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-gray-600"</span><span class="s3">&gt;</span><span class="s1">A seasoned solutions architect and DevOps Specialist with extensive experience, expertly designing and implementing cutting-edge solutions.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Kabelo Papo --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg text-center text-gray-800"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&amp;text=KP"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Kabelo Papo"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-32 h-32 rounded-full mx-auto mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-1"</span><span class="s3">&gt;</span><span class="s1">Kabelo Papo</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-accent-blue font-medium mb-2"</span><span class="s3">&gt;</span><span class="s1">Head of Infrastructure and Support</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-gray-600"</span><span class="s3">&gt;</span><span class="s1">Leads and mentors teams, optimizes IT infrastructure, ensures cybersecurity, and delivers seamless solutions.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Thandi Cele --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg text-center text-gray-800"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&amp;text=TC"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Thandi Cele"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-32 h-32 rounded-full mx-auto mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-1"</span><span class="s3">&gt;</span><span class="s1">Thandi Cele</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-accent-blue font-medium mb-2"</span><span class="s3">&gt;</span><span class="s1">Head of Business Development</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-gray-600"</span><span class="s3">&gt;</span><span class="s1">Responsible for forging strategic partnerships, cultivating customer relationships, and driving revenue growth.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Vakile Cele --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-lg shadow-lg text-center text-gray-800"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&amp;text=VC"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Vakile Cele"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-32 h-32 rounded-full mx-auto mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-1"</span><span class="s3">&gt;</span><span class="s1">Vakile Cele</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-accent-blue font-medium mb-2"</span><span class="s3">&gt;</span><span class="s1">Head of HR Consultancy</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-gray-600"</span><span class="s3">&gt;</span><span class="s1">A seasoned Human Resources and Employee Relations practitioner with extensive expertise in labor relations, organizational transformation, and executive-level strategy.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">hr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"border-t-2 border-gray-200 my-8"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Contact Us Section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"contact"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 px-4 bg-custom-blue text-white"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto text-center"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-4xl font-bold mb-8"</span><span class="s3">&gt;</span><span class="s1">Contact Us Now</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col md:flex-row justify-center items-center gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-semibold mb-2"</span><span class="s3">&gt;</span><span class="s4">EMAIL</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg"</span><span class="s3">&gt;</span><span class="s1">info@e2z.co.za</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-semibold mb-2"</span><span class="s3">&gt;</span><span class="s4">SOCIAL</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg"</span><span class="s3">&gt;</span><span class="s1">Connect with us on social media</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- Add social media icons here if needed --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-center space-x-4 mt-2"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-white hover:text-gray-200"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s1">&lt;!-- Placeholder for social icon --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">aria-hidden</span><span class="s3">=</span><span class="s1">"true"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M22.25 12.148c0-5.523-4.477-10-10-10S2.25 6.625 2.25 12.148c0 4.966 3.63 9.096 8.375 9.873v-7.075h-2.5v-2.798h2.5v-2.09c0-2.474 1.488-3.834 3.714-3.834 1.056 0 2.112.187 2.112.187v2.333h-1.204c-1.187 0-1.554.74-1.554 1.5v1.804h2.617l-.417 2.798h-2.2v7.075c4.745-.777 8.375-4.907 8.375-9.873z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-white hover:text-gray-200"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s1">&lt;!-- Placeholder for social icon --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">aria-hidden</span><span class="s3">=</span><span class="s1">"true"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M.75 6.946c0-1.743 1.39-3.153 3.102-3.153h16.296C21.21 3.793 22.6 5.203 22.6 6.946v10.108c0 1.743-1.39 3.154-3.102 3.154H3.852C2.14 20.208.75 18.798.75 17.054V6.946zm2.84 9.07l-2.03-2.03-1.56 1.56L3.43 19.34l3.12-3.12.01-.01c.71-.71.71-1.87 0-2.58l-.01-.01c-.71-.71-1.87-.71-2.58 0zm10.74-3.75h4.17c.56 0 1.01.45 1.01 1.01s-.45 1.01-1.01 1.01h-4.17c-.56 0-1.01-.45-1.01-1.01s.45-1.01 1.01-1.01zm-4.17 0h2.08c.56 0 1.01.45 1.01 1.01s-.45 1.01-1.01 1.01h-2.08c-.56 0-1.01-.45-1.01-1.01s.45-1.01 1.01-1.01zm-4.17 0H7.25c.56 0 1.01.45 1.01 1.01s-.45 1.01-1.01 1.01H6.17c-.56 0-1.01-.45-1.01-1.01s.45-1.01 1.01-1.01z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Footer --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">footer</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-custom-dark-blue text-white py-8 px-4 text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">&amp;copy; 2023 E2Z Solutions Hub. All rights reserved.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">footer</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
+
+<body class="bg-white text-gray-800">
+
+
+
+
+<!-- Header/Navigation -->
+
+<header class="bg-custom-blue text-white p-4 shadow-md">
+
+<nav class="container mx-auto flex justify-between items-center flex-wrap">
+
+<!-- Logo Image Added -->
+
+<div class="flex items-center">
+
+<img src="http://googleusercontent.com/file_content/2" alt="E2Z Solutions Hub Logo" class="h-10 md:h-12 w-auto">
+
+</div>
+
+<div class="space-x-4 flex-grow text-right pr-4 md:flex-grow-0">
+
+<a href="#solutions" class="hover:text-gray-200">Explore Our Solutions</a>
+
+<a href="#about-us" class="hover:text-gray-200">About Us</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+
+<!-- Hero Section -->
+
+<section class="hero-section py-20 px-4 md:py-32">
+
+<div class="container mx-auto text-center">
+
+<h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+
+ Empowering Africa's Digital Future. Today.
+
+</h1>
+
+<p class="text-lg md:text-xl mb-8">
+
+ Welcome to E2Z Solutions Hub, a premier technology and business solutions provider rooted in South Africa, with operations spanning Gauteng and KwaZulu-Natal. With over 95 years of combined industry experience, our seasoned experts empower businesses and government entities with tailored, sustainable, and secure solutions that drive efficiency, foster growth, and ignite innovation in the digital era. We are committed to being the leading force in Africa's digital transformation, ensuring our clients achieve operational excellence and long-term success.
+
+</p>
+
+<a href="#contact" class="bg-white text-custom-blue px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-100 transition duration-300">
+
+ Contact Us Now
+
+</a>
+
+</div>
+
+</section>
+
+
+
+
+<!-- About Us Section -->
+
+<section id="about-us" class="py-16 px-4">
+
+<div class="container mx-auto">
+
+<h2 class="text-4xl font-bold text-center mb-12 text-custom-blue">About Us</h2>
+
+<div class="grid md:grid-cols-3 gap-8 text-center">
+
+<div class="p-6 rounded-lg shadow-lg bg-custom-light-blue">
+
+<div class="text-5xl mb-4">🎯</div>
+
+<h3 class="text-xl font-semibold mb-2">Mission</h3>
+
+<p>Empowering organizations with sustainable and efficient solutions to foster growth, security, and innovation in the digital era.</p>
+
+</div>
+
+<div class="p-6 rounded-lg shadow-lg bg-custom-light-blue">
+
+<div class="text-5xl mb-4">🚀</div>
+
+<h3 class="text-xl font-semibold mb-2">Vision</h3>
+
+<p>To be the leading provider of innovative and sustainable business and technology solutions in Africa and beyond.</p>
+
+</div>
+
+<div class="p-6 rounded-lg shadow-lg bg-custom-light-blue">
+
+<div class="text-5xl mb-4">🏆</div>
+
+<h3 class="text-xl font-semibold mb-2">Goal</h3>
+
+<p>To deliver exceptional, customer-focused solutions that drive digital transformation, operational excellence, and long-term business success.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<hr class="border-t-2 border-gray-200 my-8">
+
+
+
+
+<!-- Key Services Section -->
+
+<section id="solutions" class="py-16 px-4 bg-custom-grey">
+
+<div class="container mx-auto">
+
+<h2 class="text-4xl font-bold text-center mb-12 text-white">Key Services</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+
+<img src="http://googleusercontent.com/file_content/7" alt="ICT Services Icon - Servers and Cloud" class="w-24 h-24 mb-4 rounded-full object-cover">
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">ICT Services</h3>
+
+<p class="mb-4">Robust ICT: Build, secure, optimize your digital foundation for success.</p>
+
+<a href="#" class="text-accent-blue hover:underline font-medium">Learn More</a>
+
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+
+<img src="http://googleusercontent.com/file_content/5" alt="Consultancy Services Icon - Hands on Blueprint" class="w-24 h-24 mb-4 rounded-full object-cover">
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">Consultancy Services</h3>
+
+<p class="mb-4">Strategic Insights, tailored solutions: Navigate complexity, drive sustainable growth.</p>
+
+<a href="#" class="text-accent-blue hover:underline font-medium">Learn More</a>
+
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+
+<img src="http://googleusercontent.com/file_content/9" alt="Support Services Icon - Tech Components" class="w-24 h-24 mb-4 rounded-full object-cover">
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">Support Services</h3>
+
+<p class="mb-4">Flawless 24/7 Managed IT Support: Grow your business, we handle the tech.</p>
+
+<a href="#" class="text-accent-blue hover:underline font-medium">Learn More</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<hr class="border-t-2 border-gray-200 my-8">
+
+
+
+
+<!-- Detailed Services Section -->
+
+<section class="py-16 px-4">
+
+<div class="container mx-auto">
+
+<!-- ICT Services Detailed -->
+
+<div class="mb-16">
+
+<h2 class="text-3xl font-bold mb-6 text-custom-blue">ICT Services</h2>
+
+<p class="mb-8">In today's interconnected world, a robust and agile ICT foundation is non-negotiable for business success. Our ICT Services are designed to build, secure, and optimize your digital infrastructure, ensuring seamless operations and preparing your business for future challenges.</p>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<img src="http://googleusercontent.com/file_content/8" alt="ICT Infrastructure Icon - Cloud Architecture" class="w-16 h-16 rounded-lg object-cover">
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">ICT Infrastructure</h3>
+
+<p>Build a robust foundation for your digital operations. From network design to cloud services, we ensure your systems are resilient, scalable, and secure.</p>
+
+</div>
+
+</div>
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<img src="http://googleusercontent.com/file_content/4" alt="Technology Supply Icon - Laptop Setup" class="w-16 h-16 rounded-lg object-cover">
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">Technology Supply</h3>
+
+<p>Get the technology you need, when you need it, with E2Z Solutions Hub's efficient Technology Supply Solutions.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- Consultancy Services Detailed -->
+
+<div class="mb-16">
+
+<h2 class="text-3xl font-bold mb-6 text-custom-blue">Consultancy Services</h2>
+
+<p class="mb-8">Strategic Insights, tailored solutions: Navigate complexity, drive sustainable growth. (Further details from PDF for Consultancy Services not fully readable, using placeholder text)</p>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<img src="http://googleusercontent.com/file_content/3" alt="Compliance Icon - Gavel and Documents" class="w-16 h-16 rounded-lg object-cover">
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">Compliance & Auditing</h3>
+
+<p>Navigating complex regulatory landscapes with expertise.</p>
+
+</div>
+
+</div>
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<!-- Keeping emoji for specific HR context -->
+
+<div class="text-5xl">👥</div>
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">HR & Employee Relations</h3>
+
+<p>Cultivating high-performing teams through strategic people solutions.</p>
+
+</div>
+
+</div>
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<!-- Keeping emoji for AI for now -->
+
+<div class="text-5xl">🤖</div>
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">AI Consultancy</h3>
+
+<p>Enhancing operations and experiences by implementing intelligent automation.</p>
+
+</div>
+
+</div>
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<img src="http://googleusercontent.com/file_content/10" alt="Project Management Icon - Monitor with Graphs" class="w-16 h-16 rounded-lg object-cover">
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">Project & Programme Management</h3>
+
+<p>Ensuring successful delivery of your strategic initiatives.</p>
+
+</div>
+
+</div>
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<img src="http://googleusercontent.com/file_content/4" alt="IT Transformation Icon - Laptop Setup" class="w-16 h-16 rounded-lg object-cover">
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">IT Transformation</h3>
+
+<p>Orchestrating your organization's seamless digital evolution.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- Support Services Detailed -->
+
+<div class="mb-16">
+
+<h2 class="text-3xl font-bold mb-6 text-custom-blue">Support Services</h2>
+
+<p class="mb-8">Focus on what you do best while we manage the rest. Our comprehensive Support Services, centered around Managed IT, ensure your technology operates flawlessly 24/7, freeing your team from IT complexities and allowing you to concentrate on core business growth.</p>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<img src="http://googleusercontent.com/file_content/9" alt="ITSM Icon - Tech Components" class="w-16 h-16 rounded-lg object-cover">
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">ITSM</h3>
+
+<p>Proactive, end-to-end IT management, freeing you to focus on your core business.</p>
+
+</div>
+
+</div>
+
+<div class="bg-custom-light-blue p-6 rounded-lg shadow-md flex items-start space-x-4">
+
+<img src="http://googleusercontent.com/file_content/8" alt="Cybersecurity Icon - Cloud Architecture" class="w-16 h-16 rounded-lg object-cover">
+
+<div>
+
+<h3 class="text-xl font-semibold mb-2 text-custom-blue">Cybersecurity</h3>
+
+<p>Fortifying your digital defenses against every evolving threat.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<hr class="border-t-2 border-gray-200 my-8">
+
+
+
+
+<!-- Meet the Team Section -->
+
+<section class="py-16 px-4 bg-custom-grey text-white">
+
+<div class="container mx-auto">
+
+<h2 class="text-4xl font-bold text-center mb-12 text-white">Meet the Team</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Lunga Mkhwanazi -->
+
+<div class="bg-white p-6 rounded-lg shadow-lg text-center text-gray-800">
+
+<img src="https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&text=LM" alt="Lunga Mkhwanazi" class="w-32 h-32 rounded-full mx-auto mb-4">
+
+<h3 class="text-xl font-semibold mb-1">Lunga Mkhwanazi</h3>
+
+<p class="text-accent-blue font-medium mb-2">Managing Director</p>
+
+<p class="text-sm text-gray-600">A visionary leader with years of experience, drives strategic initiative, fosters operational excellence, and aligns business with technical solutions.</p>
+
+</div>
+
+<!-- Tshepang Papo Mkhwanazi -->
+
+<div class="bg-white p-6 rounded-lg shadow-lg text-center text-gray-800">
+
+<img src="https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&text=TPM" alt="Tshepang Papo Mkhwanazi" class="w-32 h-32 rounded-full mx-auto mb-4">
+
+<h3 class="text-xl font-semibold mb-1">Tshepang Papo Mkhwanazi</h3>
+
+<p class="text-accent-blue font-medium mb-2">Director: Compliance and Auditing</p>
+
+<p class="text-sm text-gray-600">An expert in governance with years of experience in compliance, risk management, and quality assurance.</p>
+
+</div>
+
+<!-- Merciful Sundlana -->
+
+<div class="bg-white p-6 rounded-lg shadow-lg text-center text-gray-800">
+
+<img src="https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&text=MS" alt="Merciful Sundlana" class="w-32 h-32 rounded-full mx-auto mb-4">
+
+<h3 class="text-xl font-semibold mb-1">Merciful Sundlana</h3>
+
+<p class="text-accent-blue font-medium mb-2">Director: Technology Solutions</p>
+
+<p class="text-sm text-gray-600">A seasoned solutions architect and DevOps Specialist with extensive experience, expertly designing and implementing cutting-edge solutions.</p>
+
+</div>
+
+<!-- Kabelo Papo -->
+
+<div class="bg-white p-6 rounded-lg shadow-lg text-center text-gray-800">
+
+<img src="https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&text=KP" alt="Kabelo Papo" class="w-32 h-32 rounded-full mx-auto mb-4">
+
+<h3 class="text-xl font-semibold mb-1">Kabelo Papo</h3>
+
+<p class="text-accent-blue font-medium mb-2">Head of Infrastructure and Support</p>
+
+<p class="text-sm text-gray-600">Leads and mentors teams, optimizes IT infrastructure, ensures cybersecurity, and delivers seamless solutions.</p>
+
+</div>
+
+<!-- Thandi Cele -->
+
+<div class="bg-white p-6 rounded-lg shadow-lg text-center text-gray-800">
+
+<img src="https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&text=TC" alt="Thandi Cele" class="w-32 h-32 rounded-full mx-auto mb-4">
+
+<h3 class="text-xl font-semibold mb-1">Thandi Cele</h3>
+
+<p class="text-accent-blue font-medium mb-2">Head of Business Development</p>
+
+<p class="text-sm text-gray-600">Responsible for forging strategic partnerships, cultivating customer relationships, and driving revenue growth.</p>
+
+</div>
+
+<!-- Vakile Cele -->
+
+<div class="bg-white p-6 rounded-lg shadow-lg text-center text-gray-800">
+
+<img src="https://placehold.co/150x150/0B3D91/ffffff?font=Montserrat&text=VC" alt="Vakile Cele" class="w-32 h-32 rounded-full mx-auto mb-4">
+
+<h3 class="text-xl font-semibold mb-1">Vakile Cele</h3>
+
+<p class="text-accent-blue font-medium mb-2">Head of HR Consultancy</p>
+
+<p class="text-sm text-gray-600">A seasoned Human Resources and Employee Relations practitioner with extensive expertise in labor relations, organizational transformation, and executive-level strategy.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<hr class="border-t-2 border-gray-200 my-8">
+
+
+
+
+<!-- Contact Us Section -->
+
+<section id="contact" class="py-16 px-4 bg-custom-blue text-white">
+
+<div class="container mx-auto text-center">
+
+<h2 class="text-4xl font-bold mb-8">Contact Us Now</h2>
+
+<div class="flex flex-col md:flex-row justify-center items-center gap-8">
+
+<div class="text-center">
+
+<h3 class="text-2xl font-semibold mb-2">EMAIL</h3>
+
+<p class="text-lg">info@e2z.co.za</p>
+
+</div>
+
+<div class="text-center">
+
+<h3 class="text-2xl font-semibold mb-2">SOCIAL</h3>
+
+<p class="text-lg">Connect with us on social media</p>
+
+<!-- Add social media icons here if needed -->
+
+<div class="flex justify-center space-x-4 mt-2">
+
+<a href="#" class="text-white hover:text-gray-200">
+
+<!-- Placeholder for social icon -->
+
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.25 12.148c0-5.523-4.477-10-10-10S2.25 6.625 2.25 12.148c0 4.966 3.63 9.096 8.375 9.873v-7.075h-2.5v-2.798h2.5v-2.09c0-2.474 1.488-3.834 3.714-3.834 1.056 0 2.112.187 2.112.187v2.333h-1.204c-1.187 0-1.554.74-1.554 1.5v1.804h2.617l-.417 2.798h-2.2v7.075c4.745-.777 8.375-4.907 8.375-9.873z"/></svg>
+
+</a>
+
+<a href="#" class="text-white hover:text-gray-200">
+
+<!-- Placeholder for social icon -->
+
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.75 6.946c0-1.743 1.39-3.153 3.102-3.153h16.296C21.21 3.793 22.6 5.203 22.6 6.946v10.108c0 1.743-1.39 3.154-3.102 3.154H3.852C2.14 20.208.75 18.798.75 17.054V6.946zm2.84 9.07l-2.03-2.03-1.56 1.56L3.43 19.34l3.12-3.12.01-.01c.71-.71.71-1.87 0-2.58l-.01-.01c-.71-.71-1.87-.71-2.58 0zm10.74-3.75h4.17c.56 0 1.01.45 1.01 1.01s-.45 1.01-1.01 1.01h-4.17c-.56 0-1.01-.45-1.01-1.01s.45-1.01 1.01-1.01zm-4.17 0h2.08c.56 0 1.01.45 1.01 1.01s-.45 1.01-1.01 1.01h-2.08c-.56 0-1.01-.45-1.01-1.01s.45-1.01 1.01-1.01zm-4.17 0H7.25c.56 0 1.01.45 1.01 1.01s-.45 1.01-1.01 1.01H6.17c-.56 0-1.01-.45-1.01-1.01s.45-1.01 1.01-1.01z"/></svg>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- Footer -->
+
+<footer class="bg-custom-dark-blue text-white py-8 px-4 text-center">
+
+<div class="container mx-auto">
+
+<p>&copy; 2023 E2Z Solutions Hub. All rights reserved.</p>
+
+</div>
+
+</footer>
+
+
+
+
 </body>
+
 </html>
